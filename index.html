@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow — Organize Work, Effortlessly</title>
+  <meta name="description" content="TaskFlow helps teams plan, track and ship work faster. Project management built for modern teams.">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Scroll progress bar ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="nav-logo" data-nav-link>
+        <span class="logo-icon"><i class="fa-solid fa-diagram-project"></i></span>
+        TaskFlow
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-nav-link>Home</a></li>
+        <li><a href="#features" class="nav-link" data-nav-link>Features</a></li>
+        <li><a href="#pricing" class="nav-link" data-nav-link>Pricing</a></li>
+        <li><a href="#blog" class="nav-link" data-nav-link>Blogs</a></li>
+        <li><a href="#contact" class="nav-link" data-nav-link>Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#pricing" class="btn btn-primary btn-sm">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-container">
+      <div class="hero-text reveal">
+        <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> Now with AI-powered planning</span>
+        <h1 class="hero-title">Organize work, <span class="gradient-text">effortlessly</span></h1>
+        <p class="hero-subtitle">TaskFlow brings your team's tasks, docs and timelines into one calm, focused workspace — so you ship more and manage less.</p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary btn-lg">
+            Get Started <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button class="btn btn-outline btn-lg" id="watchDemoBtn">
+            <i class="fa-solid fa-circle-play"></i> Watch Demo
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="10" data-suffix="K+">0</span>
+            <span class="stat-label">Active Users</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="500" data-suffix="+">0</span>
+            <span class="stat-label">Companies</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="99.9" data-suffix="%" data-decimal="1">0</span>
+            <span class="stat-label">Uptime</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="dashboard-mockup floating">
+          <div class="mockup-topbar">
+            <span class="mockup-dot red"></span>
+            <span class="mockup-dot yellow"></span>
+            <span class="mockup-dot green"></span>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-sidebar">
+              <div class="mockup-pill active"></div>
+              <div class="mockup-pill"></div>
+              <div class="mockup-pill"></div>
+              <div class="mockup-pill"></div>
+            </div>
+            <div class="mockup-main">
+              <div class="mockup-card">
+                <div class="mockup-card-bar" style="width:70%"></div>
+                <div class="mockup-card-bar short" style="width:40%"></div>
+              </div>
+              <div class="mockup-card">
+                <div class="mockup-card-bar" style="width:85%"></div>
+                <div class="mockup-card-bar short" style="width:55%"></div>
+              </div>
+              <div class="mockup-chart">
+                <span style="height:40%"></span>
+                <span style="height:70%"></span>
+                <span style="height:55%"></span>
+                <span style="height:90%"></span>
+                <span style="height:65%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-chip chip-1"><i class="fa-solid fa-check"></i> Task completed</div>
+        <div class="floating-chip chip-2"><i class="fa-solid fa-users"></i> 4 teammates online</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Features Section ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">Everything your team needs</h2>
+        <p class="section-subtitle">Powerful tools wrapped in a clean, distraction-free interface.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-list-check"></i></div>
+          <h3 class="feature-title">Smart Task Boards</h3>
+          <p class="feature-desc">Organize work visually with flexible boards that adapt to how your team actually works.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3 class="feature-title">Time Tracking</h3>
+          <p class="feature-desc">Automatic time tracking so you know exactly where every hour goes, without the spreadsheets.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3 class="feature-title">Team Collaboration</h3>
+          <p class="feature-desc">Comments, mentions and live updates keep everyone aligned without endless meetings.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 class="feature-title">Insightful Analytics</h3>
+          <p class="feature-desc">Real-time dashboards turn raw activity into decisions you can actually act on.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-plug"></i></div>
+          <h3 class="feature-title">100+ Integrations</h3>
+          <p class="feature-desc">Connect the tools you already use — Slack, GitHub, Figma, Google Workspace and more.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="feature-title">Enterprise Security</h3>
+          <p class="feature-desc">SOC 2 compliant infrastructure with SSO, audit logs and granular permissions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pricing Section ===== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Pricing</span>
+        <h2 class="section-title">Simple, transparent pricing</h2>
+        <p class="section-subtitle">Start free. Upgrade when your team grows.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <h3 class="plan-name">Starter</h3>
+          <p class="plan-desc">For individuals and small projects</p>
+          <div class="plan-price"><span class="price-currency">$</span>0<span class="price-period">/mo</span></div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Up to 5 projects</li>
+            <li><i class="fa-solid fa-check"></i> 3 team members</li>
+            <li><i class="fa-solid fa-check"></i> Basic analytics</li>
+            <li><i class="fa-solid fa-check"></i> Community support</li>
+          </ul>
+          <button class="btn btn-outline choose-plan-btn" data-plan="Starter">Choose Plan</button>
+        </div>
+
+        <div class="pricing-card pricing-card-highlight reveal">
+          <span class="popular-badge">Most Popular</span>
+          <h3 class="plan-name">Professional</h3>
+          <p class="plan-desc">For growing teams that need more</p>
+          <div class="plan-price"><span class="price-currency">$</span>29<span class="price-period">/mo</span></div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Unlimited projects</li>
+            <li><i class="fa-solid fa-check"></i> 20 team members</li>
+            <li><i class="fa-solid fa-check"></i> Advanced analytics</li>
+            <li><i class="fa-solid fa-check"></i> Priority support</li>
+            <li><i class="fa-solid fa-check"></i> Custom integrations</li>
+          </ul>
+          <button class="btn btn-primary choose-plan-btn" data-plan="Professional">Choose Plan</button>
+        </div>
+
+        <div class="pricing-card reveal">
+          <h3 class="plan-name">Enterprise</h3>
+          <p class="plan-desc">For organizations at scale</p>
+          <div class="plan-price"><span class="price-currency">$</span>99<span class="price-period">/mo</span></div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Unlimited everything</li>
+            <li><i class="fa-solid fa-check"></i> SSO &amp; SAML</li>
+            <li><i class="fa-solid fa-check"></i> Dedicated manager</li>
+            <li><i class="fa-solid fa-check"></i> 99.9% SLA</li>
+            <li><i class="fa-solid fa-check"></i> Custom contracts</li>
+          </ul>
+          <button class="btn btn-outline choose-plan-btn" data-plan="Enterprise">Choose Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Blog Section ===== -->
+  <section class="blog" id="blog">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Blog</span>
+        <h2 class="section-title">From our blog</h2>
+        <p class="section-subtitle">Tips, updates and stories from the TaskFlow team.</p>
+      </div>
+
+      <div class="blog-grid" id="blogGrid">
+        <!-- Loading state injected here by app.js -->
+        <div class="blog-loading" id="blogLoading">
+          <div class="spinner"></div>
+          <p>Loading latest posts…</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="contact" id="contact">
+    <div class="container contact-container">
+      <div class="contact-info reveal">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's talk</h2>
+        <p class="section-subtitle">Questions about a plan? Reach out and we'll get back within a day.</p>
+
+        <div class="contact-detail">
+          <i class="fa-solid fa-envelope"></i>
+          <span>hello@taskflow.example</span>
+        </div>
+        <div class="contact-detail">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Bengaluru, India</span>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name">
+          <span class="form-error" id="nameError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+          <span class="form-error" id="emailError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can we help?"></textarea>
+          <span class="form-error" id="messageError" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="registerBtn">
+          Register <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+        <div class="form-success" id="formSuccess" role="status">
+          <i class="fa-solid fa-circle-check"></i> Message Sent Successfully
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" data-nav-link>
+          <span class="logo-icon"><i class="fa-solid fa-diagram-project"></i></span>
+          TaskFlow
+        </a>
+        <p>The calm way to organize work for modern teams.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home" data-nav-link>Home</a>
+        <a href="#features" data-nav-link>Features</a>
+        <a href="#pricing" data-nav-link>Pricing</a>
+        <a href="#blog" data-nav-link>Blogs</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#">Documentation</a>
+        <a href="#">API Reference</a>
+        <a href="#">Community</a>
+        <a href="#contact" data-nav-link>Support</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> TaskFlow. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Back to top button ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
